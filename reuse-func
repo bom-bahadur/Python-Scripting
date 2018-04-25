@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+
+## Importing specific func from a python file/script name: function3.py
+## put a function or two in a file and then, if you also want it to run as script, place that special if__name__ == "__main__":## syntax.
+
+from function3 import disk_func
+import subprocess
+
+def tmp_space():
+	tmp_usage = "du"
+	tmp_arg = "-h"
+	path = "/tmp"
+	print "Space used in /tmp directory"
+	subprocess.call([tmp_usage, tmp_arg, path])
+
+def main():
+	disk_func()
+	tmp_space()
+if __name__ == "__main__":
+	main()
+
+
