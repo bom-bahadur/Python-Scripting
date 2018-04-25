@@ -1,0 +1,36 @@
+#!/usr/bin/python
+
+## importing functoin in d/f files/script BUT not runnning its output while imporing it.To be defined at end of main() func.
+
+import subprocess
+
+def uname_func():
+
+	#Command 1
+	uname = "uname"
+	uname_arg = "-a"
+	print "Gathering system information with %s command:\n" % uname
+	subprocess.call([uname, uname_arg])
+	
+## "%s" is used as a placeholder for string values you want inject into a formatted string. In this py script, "%s" is placeholder for string (uname), value. %s = holds %uname.
+## "%d" is used as a placeholder for numeric or decimal values.
+## A string is a sequence of characters. A character is simply a symbol. For example, the English language has 26 characters.
+
+def disk_func():
+
+	#Command 2
+	diskspace = "df"
+	diskspace_arg = "-h"
+	print "Gathering system information with %s command:\n" % diskspace
+	subprocess.call([diskspace, diskspace_arg])
+
+### Main function that call other functions - IMPORTANT ###
+
+def main():
+	uname_func()
+	disk_func()
+main()	
+
+if __name__ == "__main__":
+	main()
+
