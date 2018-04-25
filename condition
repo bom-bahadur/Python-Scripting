@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+
+'''
+To check if '/tmp' is a directory or not.
+'''
+
+import os
+
+if os.path.isdir("/tmp"):
+	print "/tmp is a dir"
+else:
+	print "/tmp is not a dir"
